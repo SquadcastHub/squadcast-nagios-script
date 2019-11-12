@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+#
+# Python3 script to post Nagios alerts to Squadcast.
+# This script has been tested with Python 3.7.4
+#
 import sys
 import os
 import json
