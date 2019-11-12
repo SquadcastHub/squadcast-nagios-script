@@ -1,11 +1,11 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import sys
 import os
 import json
 import urllib.request
 
 def print_usage():
-    """Print the script usage"""
+    """Print the script usage"""/Users/aahelguha/squadcast-code/squadcast-nagios-script/sq-nagios-service.py
     print("Usage:\n  sq-nagios-service.py <url> <hostname> <service_description> <service_state> <service_output> <hostaddress>")
 
 def form_payload(hostname = "", service_description = "",service_state = "",hostaddress = "",service_output = ""):
