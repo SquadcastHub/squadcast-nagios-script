@@ -15,7 +15,7 @@ def print_usage():
 def form_payload(hostname = "",host_state = "",hostaddress = "",host_output = ""):
     """Forms the python representation of the data payload to be sent from the passed configuration"""
 
-    payload_rep = {"hostname" : hostname,"host_state":host_state,"hostaddress":hostaddress,"host_output":host_output }
+    payload_rep = {"hostname" : hostname,"host_state":host_state,"hostaddress":hostaddress,"host_output":host_output,"alert_source":"HOST" }
     return payload_rep
 
 def post_to_url(url, payload):

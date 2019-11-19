@@ -9,13 +9,13 @@ import json
 import urllib.request
 
 def print_usage():
-    """Print the script usage"""/Users/aahelguha/squadcast-code/squadcast-nagios-script/sq-nagios-service.py
+    """Print the script usage"""
     print("Usage:\n  sq-nagios-service.py <url> <hostname> <service_description> <service_state> <service_output> <hostaddress>")
 
 def form_payload(hostname = "", service_description = "",service_state = "",hostaddress = "",service_output = ""):
     """Forms the python representation of the data payload to be sent from the passed configuration"""
 
-    payload_rep = {"hostname" : hostname,"servicedesc":service_description,"service_state":service_state,"hostaddress":hostaddress,"service_output":service_output }
+    payload_rep = {"hostname" : hostname,"servicedesc":service_description,"service_state":service_state,"hostaddress":hostaddress,"service_output":service_output,"alert_source":"SERVICE" }
 
     return payload_rep
 
