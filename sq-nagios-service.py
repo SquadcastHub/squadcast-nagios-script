@@ -22,8 +22,11 @@ def form_payload(hostname = "", service_description = "",service_state = "",host
 def post_to_url(url, payload):
     """Posts the formed payload as json to the passed url"""
     try:
-        req = urllib.request.Request(url, data=bytes(json.dumps(payload), "utf-8"))
-        req.add_header("Content-Type", "application/json")
+        headers={
+        'User-Agent': 'squadcast',
+        "Content-Type": "application/json"
+        }
+        req = urllib.request.Request(url, data=bytes(json.dumps(payload),"utf-8"),headers=headers)
         resp = urllib.request.urlopen(req)
         if resp.status > 299:
            print("[sq-nagios-service] Request failed with status code %s : %s" % (resp.status, resp.read()))
